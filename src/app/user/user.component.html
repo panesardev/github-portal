@@ -1,0 +1,54 @@
+<section class="animate__animated animate__fadeInUp">
+	<form class="text-center mt-3" [formGroup]="userForm" 
+		(submit)="searchUser(userForm.value.username);">
+		<input type="text" name="user" 
+			formControlName="username" 
+			class="repo-input px-3 py-1 text" 
+			placeholder="enter a username"
+		>
+		<button type="submit"
+			class="ml-3 px-3 py-1 text-green btn" 
+			[disabled]="!userForm.valid">Find
+		</button>
+	</form>
+	<div class="card mt-3 py-3 px-4">
+		<div *ngIf="!loading; else isLoading;">
+			<div *ngIf="userFound; else userNotFound;">
+				<div class="row mb-2">
+					<div class="col-md-2 text-md-left text-center pl-sm-5 pl-auto">
+						<img [src]="photourl" class="dp" alt="Display Picture" width="150">
+					</div>
+					<div class="col-md-5 text-md-left text-center pl-0 pl-sm-5">
+						<h1 class="text-blue m-0 mt-2 username">{{ username | uppercase }}</h1>
+						<p class="mt-2 m-0 name">{{ name }}</p>
+						<p class="mt-2 m-0">{{ location }}</p>
+						<p class="mt-2 m-0">Followers: {{ followers }}</p>
+						<p class="mt-2 m-0">Following: {{ following }}</p>
+						<p class="mt-2 m-0"><a target="_blank" [href]="userurl">Github Link</a></p>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-7 pl-sm-5">
+						<div *ngIf="repos; else noRepos;">
+							<div class="repos-heading text-sm-left text-center mb-3">Repositories</div>
+							<app-repo-list [repos]="repos"></app-repo-list>
+						</div>
+						<ng-template #noRepos>
+							<h2>{{ username }} does not have any repositories</h2>
+						</ng-template>
+					</div>
+					<div class="col-md-5"></div>
+				</div>
+			</div>
+			<ng-template #userNotFound>
+				<div>
+					<h1>User not found</h1>
+				</div>
+			</ng-template>
+		</div>
+		<ng-template #isLoading>
+			<div class="loader mx-auto"></div>
+		</ng-template>
+	</div>
+</section>

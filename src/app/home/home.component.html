@@ -1,0 +1,32 @@
+<section class="animate__animated animate__fadeInUp">
+	<div class="bg-img mt-3">
+		<div class="after-img px-5 pb-5">
+			<h1 class="text-center text-light pt-5">Github Portal</h1>
+			<p class="text-light text-center">Find git repositories and information about users</p>
+
+			<form class="text-center" [formGroup]="repoForm" (submit)="findRepo()">
+				<input type="text" name="repo" 
+					formControlName="reponame" 
+					class="repo-input px-3 py-1 text" 
+					placeholder="username/repository"
+				>
+				<button type="submit" 
+					class="ml-2 px-3 py-1 text-green btn" 
+					[disabled]="!repoForm.valid">Find
+				</button>
+			</form>
+			
+			<form class="text-center mt-3" [formGroup]="userForm" (submit)="findUser()">
+				<input type="text" name="user" 
+					formControlName="username" 
+					class="repo-input px-3 py-1 text" 
+					placeholder="enter username"
+				>
+				<button type="submit"
+					class="ml-2 px-3 py-1 text-green btn" 
+					[disabled]="!userForm.valid">Find
+				</button>
+			</form>
+		</div>	
+	</div>
+</section>

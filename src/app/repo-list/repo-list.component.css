@@ -1,0 +1,10 @@
+div {
+	background-color: rgba(69, 124, 206, 0.137);
+	border-radius: 3px;
+}
+div:hover {
+	background-color: rgba(69, 124, 206, 0.226);
+}
+div p {
+	font-size: 1.15rem;
+}

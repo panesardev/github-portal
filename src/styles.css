@@ -1,1 +1,236 @@
-/* You can add global styles to this file, and also import other style files */
+@import './assets/css/bootstrap.grid.css';
+@import './assets/css/bootstrap.utilities.css';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans&display=swap';
+
+:root {
+    --red:          #FF3860;
+    --orange:       #fa7147;
+    --pink:         #e70f73;
+    --green:        #00CB62;
+    --yellow:       #f0cb24;
+    --blue:         #0272F7;
+    --purple:       #651FFF;
+    --skyblue:      #1ABCF1;
+    --teal:         #33d8db;
+    --navy:         #0c3b50;
+    --light:        #f7f9fa;
+    --bg-dark:      #282C34;
+    --text:         #4c5563;
+}
+.text { color: var(--text); }
+.text-red { color: var(--red); }
+.text-orange { color: var(--orange); }
+.text-pink { color: var(--pink); }
+.text-green { color: var(--green); }
+.text-blue { color: var(--blue); }
+.text-purple { color: var(--purple); }
+.text-yellow { color: var(--yellow); }
+.text-skyblue { color: var(--skyblue); }
+.text-teal { color: var(--teal); }
+.text-navy { color: var(--navy); }
+.text-light { color: var(--light); }
+.text-white { color: white; }
+
+.bg-navy { background-color: var(--navy); }
+.bg-purple { background-color: var(--purple); }
+.bg-light { background-color: var(--light); }
+.bg-red { background-color: var(--red); }
+.bg-blue { background-color: var(--blue); }
+.bg-skyblue { background-color: var(--skyblue); }
+.bg-green { background-color: var(--green); }
+.bg-teal { background-color: var(--teal); }
+.bg-yellow { background-color: var(--yellow); }
+.bg-pink { background-color: var(--pink); }
+.bg-orange { background-color: var(--orange); }
+.bg-dark { background-color: var(--bg-dark); }
+.bg-white { background-color: white; }
+
+.loader {
+	border: 16px solid #f3f3f3;
+	border-radius: 50%;
+	border-top: 16px solid var(--blue);
+	width: 120px;
+	height: 120px;
+	-webkit-animation: spin 2s linear infinite;
+	animation: spin 2s linear infinite;
+}
+@-webkit-keyframes spin {
+	0% { -webkit-transform: rotate(0deg); }
+	100% { -webkit-transform: rotate(360deg); }
+} 
+@keyframes spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}
+.card {
+	border-radius: 3px;
+	box-shadow: 0 0 5px rgb(221, 224, 230);
+}
+
+.animate__animated {
+	animation-duration: .5s;
+	backface-visibility: hidden;
+	transform: translateZ(0);
+}
+
+html {
+	scroll-behavior: smooth;
+}
+body {
+	background-color: var(--light);
+	margin: 0;
+	padding: 0;
+}
+* {
+	font-family: 'open sans';
+	color: var(--text);
+	outline: none;
+}
+button:hover, a:hover {
+	cursor: pointer;
+}
+.btn, input {
+	background-color: white;
+	border: .1rem solid transparent;
+	border-radius: 3px;
+	box-shadow: 0 0 5px rgb(221, 224, 230);
+	transition: .25s all ease;
+}
+a {
+	transition: .25s all ease;
+	color: var(--blue);
+}
+a:hover {
+	color: var(--blue);
+	text-decoration: underline;
+}
+
+.btn.bg-blue:hover {
+	background-color: #0270f7c0;
+}
+.btn.bg-red:hover {
+	background-color: #FF3860c0;
+}
+.btn.bg-green:hover {
+	background-color: #00CB62c0;
+}
+.btn.bg-yellow:hover {
+	background-color: #f0cb24c0;
+}
+.btn.bg-pink:hover {
+	background-color: #e70f73c0;
+}
+.btn.bg-skyblue:hover {
+	background-color: #1ABCF1c0;
+}
+.btn.bg-navy:hover {
+	background-color: #0c3b50c0;
+}
+.btn.bg-teal:hover {
+	background-color: #33d8dbc0;
+}
+.btn.bg-orange:hover {
+	background-color: #fa7147c0;
+}
+.btn.bg-purple:hover {
+	background-color: #651FFFc0;
+}
+.btn.bg-dark:hover {
+	background-color: #282C34c0;
+}
+.btn.text-blue:hover, .btn.text:hover {
+	background-color: #0270f7c0;
+	color: var(--light);
+}
+.btn.text-red:hover {
+	background-color: var(--red);
+	color: var(--light);
+}
+.btn.text-pink:hover {
+	background-color: var(--pink);
+	color: var(--light);
+}
+.btn.text-orange:hover {
+	background-color: var(--orange);
+	color: var(--light);
+}
+.btn.text-teal:hover {
+	background-color: var(--teal);
+	color: var(--light);
+}
+.btn.text-navy:hover {
+	background-color: var(--navy);
+	color: var(--light);
+}
+.btn.text-green:hover {
+	background-color: var(--green);
+	color: var(--light);
+}
+.btn.text-yellow:hover {
+	background-color: var(--yellow);
+	color: var(--light);
+}
+.btn.text-skyblue:hover {
+	background-color: var(--skyblue);
+	color: var(--light);
+}
+.btn.text-purple:hover {
+	background-color: var(--purple);
+	color: var(--light);
+}
+
+.badge-blue { 
+	border-radius: 3px;
+	background-color: #0270f71e;
+	color: var(--blue);
+}
+.badge-red { 
+	border-radius: 3px;
+	background-color: #FF38601e;
+	color: var(--red);
+}
+.badge-pink { 
+	border-radius: 3px;
+	background-color: #e70f731e;
+	color: var(--pink);
+}
+.badge-orange { 
+	border-radius: 3px;
+	background-color: #fa71471e;
+	color: var(--orange);
+}
+.badge-purple { 
+	border-radius: 3px;
+	background-color: #651FFF1e;
+	color: var(--purple);
+}
+.badge-navy { 
+	border-radius: 3px;
+	background-color: #0c3b501e;
+	color: var(--navy);
+}
+.badge-teal { 
+	border-radius: 3px;
+	background-color: #33d8db1e;
+	color: var(--teal);
+}
+.badge-green { 
+	border-radius: 3px;
+	background-color: #00CB621e;
+	color: var(--green);
+}
+.badge-yellow { 
+	border-radius: 3px;
+	background-color: #f0cb241e;
+	color: var(--yellow);
+}
+.badge-light { 
+	border-radius: 3px;
+	background-color: #f7f9fa1e;
+	color: var(--light);
+}
+.badge-skyblue { 
+	border-radius: 3px;
+	background-color: #1ABCF11e;
+	color: var(--skyblue);
+}

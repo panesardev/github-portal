@@ -1,0 +1,33 @@
+.bg-img {
+	background-image: url('../../assets/img/home_bg.jpg');
+	width: 100%;
+	max-width: 1200px;
+	height: auto;
+	margin: 0 auto;
+	border-radius: 3px;
+	box-shadow: 0 0 5px rgb(221, 224, 230);
+}
+.after-img {
+	background-color: #0270f7c0;
+	border-radius: 3px;
+}
+.after-img h1 {
+	font-weight: 400;
+	font-size: 4rem;
+	text-transform: uppercase;
+	margin: 0;
+}
+.after-img p {
+	font-size: 1.2rem;
+}
+.after-img a:hover {
+	color: var(--light);
+}
+.repo-input {
+	box-shadow: none;
+	max-width: 400px;
+	width: 60%;
+}
+button[type="submit"] {
+	box-shadow: none;
+}

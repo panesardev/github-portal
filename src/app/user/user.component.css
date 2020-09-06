@@ -1,0 +1,17 @@
+.dp {
+	border-radius: 100px;
+	box-shadow: 0 0 5px rgb(221, 224, 230);
+}
+.username {
+	font-size: 2rem;
+}
+.name {
+	font-size: 1.5rem;
+}
+.repos-heading {
+	font-size: 1.25rem;
+}
+.repo-input {
+	max-width: 500px;
+	width: 60%;
+}
